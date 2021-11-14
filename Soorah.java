@@ -1,5 +1,5 @@
 
-public class Soorah {
+public class kakoskwdikas {
 
     private static int frame;
 
