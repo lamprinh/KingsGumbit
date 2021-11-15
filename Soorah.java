@@ -1,5 +1,5 @@
 
-public class kakoskwdikas {
+public class oxikaitosokakoskwdikas {
 
     private static int frame;
 
