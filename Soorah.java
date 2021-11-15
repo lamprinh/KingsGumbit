@@ -1,6 +1,7 @@
 
 public class oxikaitosokakoskwdikas {
 
+    private static final LAMPRINI_FOR_THE_WIN;
     private static int frame;
 
     public static int getAirframe() {
