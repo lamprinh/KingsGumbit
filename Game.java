@@ -2,15 +2,15 @@ import java.util.Scanner;
 import java.util.Random;
 public class Game {
 	Scanner input = new Scanner(System.in);
-	public static  String[] Knowledge_cards;
-	public static  String[] Menu_cards;
-	boolean[] kn_cards;
+	public static  String[] Knowledge_cards; // πινακας με τις καρτες ερωτήσεων για τις περιοχες
+	public static  String[] Menu_cards; // πινακας για καρτες εντολων( προχωρα 2 θεσεις κτλ)
+	boolean[] kn_cards; // πινακας που δείχνει αν η περιοχη ανήκει η οχι σε καποιον
 	int players;
 	Random dicenumber=new Random();
-	public Game(int players) {
+	public Game(int players) { // κατασκευαστης θετει τον αριθμο των παικτων ανάλογα με την είσοδο που θα δωσουν οι χρηστες
 		this.players=players;
 	}
-	public boolean Seat_check(int seat) {
+	public boolean Seat_check(int seat) { // ελεγχει αν ανηκει η περιοχη σε καποιον παικτη
 		if (kn_cards[seat]=true) {
 			return true;
 
@@ -19,7 +19,7 @@ public class Game {
 			return false ;
 		}
 	}
-	public boolean buy() {
+	public boolean buy() { //μεθοδος που δινει την επιλογη αγορας 
 		System.out.println("Would you like to buy this Area?(Yes/No)");
 		String answer = input.nextLine();
 		if (answer=="YES") {
@@ -29,12 +29,12 @@ public class Game {
 
 
 		}
-			public int roll_1() {
+			public int roll_1() { //μεθοδος που φερνει αποτελεσμα στο ζαρι (1-6)
 		 int dice;
 		 dice = 1 +dicenumber.nextInt(6);
 		 return dice;
 		}
-		public int roll_2(int pos) {
+		public int roll_2(int pos) { // μεθοδος που τραβαει τυχαια καρτα ερωτησης για τις περιοχες αναλογα με το που βρισκεται ο παικτης 
 			int x=0;
 			if (pos>1 && pos<6) {
 				x= 1+dicenumber.nextInt(10);
@@ -47,12 +47,12 @@ public class Game {
 			}
 			return x;
 		}
-		public int roll_3() {
+		public int roll_3() { //μεθοδος που τραβαει τυχαια καρτα απ το μενου εντολων
 		 int x;
 		 x= 1 +dicenumber.nextInt(15);
 		 return x;
 }
-	public int move(int pos) {
+	public int move(int pos) { //μεθοδος που μετακινει τον χαρακτηρα με βαση το ζαρι που εφερε
 	  pos = pos + roll_1();
 	  return pos;
 	}
