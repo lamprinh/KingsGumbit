@@ -8,10 +8,10 @@ public class Game {
 	String[] kn_cards;
 	int players;
 	Random dicenumber=new Random();
-	public Game(int players) {
+	public Game(int players) { κατασκεαυστής που ορίζει τον αριθμό των παικτών
 		this.players=players;
 	}
-	public boolean Seat_check(int seat) {
+	public boolean Seat_check(int seat) { //ελέγχει αν η εκάστοτε περιοχή ανήκει σε κάποιον παίκτη
 		if (kn_cards[seat].equals("null")) {
 			return true;
 
@@ -20,7 +20,7 @@ public class Game {
 			return false ;
 		}
 	}
-	public boolean buy() {
+	public boolean buy() {  // δίνει την επιλογή αγοράς στον εκάστοτε παίκτη
 		System.out.println("Would you like to buy this Area?(Yes/No)");
 		String answer = input.nextLine();
 		if (answer=="YES") {
@@ -30,12 +30,12 @@ public class Game {
 
 
 		}
-			public int roll_1() {
+			public int roll_1() { // φέρει ένα τυχαίο αποτέλεσμα(1-6) για την κίνηση των παικτών στο ταμπλό
 		 int dice;
 		 dice = 1 +dicenumber.nextInt(6);
 		 return dice;
 		}
-		public int roll_2(int pos) {
+		public int roll_2(int pos) { //επίστρεφει με βάση την περιοχή που βρίσκεται ο παίκτης στο ταμπλό μια θέση για την επιλογή τυχαίας ερώτησης
 			int x=0;
 			if (pos>1 && pos<6) {
 				x= 1+dicenumber.nextInt(10);
@@ -48,16 +48,16 @@ public class Game {
 			}
 			return x;
 		}
-		public int roll_3() {
+		public int roll_3() {//επιστρέφει μια τυχαία τιμή για την επιλογή κάρτας από το Menu εντολών
 		 int x;
 		 x= 1 +dicenumber.nextInt(15);
 		 return x;
 }
-	public int move(int pos) {
+	public int move(int pos) { //μετακινεί τον παίκτη που έχει σείρα με βάση το αποτέλεσμα του ζαριού
 	  pos = pos + roll_1();
 	  return pos;
 	}
-	public boolean anwsercheck(int pos) {
+	public boolean anwsercheck(int pos) { //ελέγχει αν η απάντηση που έδωσε ο παίκτης είναι σωστή
 		System.out.println("Please enter your anwser here");
 	    String anwser = input.nextLine();
 	    if (anwser.equals("Anwsers[pos]")) {
