@@ -8,7 +8,7 @@ public class Game {
 	public static String[] kn_cards; // πίνακας που δείχνει σε ποίον ανήκει η κάθε θέση/περιοχή
 	int players;
 	Random dicenumber=new Random();
-	public Game(int players) { κατασκεαυστής που ορίζει τον αριθμό των παικτών
+	public Game(int players) { //κατασκεαυστής που ορίζει τον αριθμό των παικτών
 		this.players=players;
 	}
 	public boolean Seat_check(int seat) { //ελέγχει αν η εκάστοτε περιοχή ανήκει σε κάποιον παίκτη
