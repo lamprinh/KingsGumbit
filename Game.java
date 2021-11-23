@@ -2,10 +2,10 @@ import java.util.Scanner;
 import java.util.Random;
 public class Game {
 	Scanner input = new Scanner(System.in);
-	public static  String[] Knowledge_cards;
-	public static  String[] Menu_cards;
-	public static String[] Answers;
-	String[] kn_cards;
+	public static  String[] Knowledge_cards; //πίνακας των ερωτήσεων
+	public static  String[] Menu_cards;// πίνακας με το Menu εντολών
+	public static String[] Answers; // πίνακας με τις απάντησεις των ερωτήσεων 
+	public static String[] kn_cards; // πίνακας που δείχνει σε ποίον ανήκει η κάθε θέση/περιοχή
 	int players;
 	Random dicenumber=new Random();
 	public Game(int players) { κατασκεαυστής που ορίζει τον αριθμό των παικτών
