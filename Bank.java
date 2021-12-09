@@ -1,7 +1,12 @@
 public abstract class Bank {
-	protected int money;
-	public Bank() {// κατασκευαστής για το πέρασμα της τιμής στην μεταβλητή money
-		money = 300000;
+	private static int money  = 300000000;;
+
+	public static int getMoney() {
+		return money;
+	}
+	
+	public static void setMoney(int mon) {
+		 money += mon;
 	}
 	
 	public void shareMoney(King k) { // μέθοδος που θα καλείται στην αρχή του παιχνιδιού για το μοιρασμα ενός χρηματικού ποσού 
@@ -11,20 +16,27 @@ public abstract class Bank {
 		money -= 2000;
 	}
 	
-	public abstract int giveMoney(King k, String []Knowledge_cards ); //{ // μέθοδος που καλείται οταν δώσει ο εκάστοτε παίκτης την απάντηση του σε ερώτηση που θα του τύχει 
+	private static final int AMOUNT = 1000;
+	public static int getAmount() {
+		return AMOUNT;
+	}
+	
+	public abstract void  giveMoney(King k); //{ // μέθοδος που καλείται οταν δώσει ο εκάστοτε παίκτης την απάντηση του σε ερώτηση που θα του τύχει 
 		                                                       //με σκόπο να πάρει ή να δώσει στον παίκτη ενα χρηματικό ποσό 
 		                                                       //έπειτα ακολουθεί η διαδικασία της αγοάς της περιοχής σε περίπτωση που η απάντηση είναι σωστή 
 	  
 	
-	public abstract int takeMoney(King k); //{// μέθοδος που παίρνει χρηματικό ποσό από παίκτη κ το μεταφέρει στην τράπεζα αν η απάντηση είναι λάθος.
+	public abstract void takeMoney(King k); //{// μέθοδος που παίρνει χρηματικό ποσό από παίκτη κ το μεταφέρει στην τράπεζα αν η απάντηση είναι λάθος.
      
-    public static String[] Prop = new String[20];// δημιουργλια 2 μονοδιάστατων πίνακων παρράλληλων που αντιστοιχούν σε 
+	public abstract void tranfer(King k, King k1); 
+	
+	public static String[] Prop = new String[20];// δημιουργλια 2 μονοδιάστατων πίνακων παρράλληλων που αντιστοιχούν σε 
                                                 //	περιοχές και τιμές
 	                                            //  πρέπει να καλεστούν από τη main για να αρχικοποιηθούν
 	public static void setNamesArray() {
 		Prop[0]= "Athina";
-		Prop[1]= "Sparti";
-		Prop[2]= "Lamia";
+		Prop[1]= "Kalavrita";
+		Prop[2]= "Tripoli";
 		Prop[3]= "Lamia";
 		Prop[4]= "Lamia";
 		Prop[5]= "Lamia";
@@ -117,24 +129,4 @@ public abstract class Bank {
 			}
 		}
 	}
-    
-//public static void transfer(King k1, King k2, String p) {// μέθοδος που θα καλείται όταν ένας βασιλιάς θα πρέπει να πληρώσει φόρο σε εναν άλλο 
-		
-		//int y=0;
-		//int point=99;
-		//boolean flag = false;
-		//while (y <= Prop.length && !flag) {
-			//if(p == Prop[y]) {
-				//point=y;
-				//flag=true;
-			//}
-			//y++;
-		//}
-		//if(point !=99) {
-		//k1.wallet -= tax(Price[point]);
-		//k2.wallet += tax(Price[point]);
-		//}
-	//}	 
-	
 }
-
