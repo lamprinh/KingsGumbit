@@ -1,10 +1,10 @@
 public class Easy extends Bank {
-  protected static String[] easy_q; // Πινακας ερωτησεων
-  protected static String[] easy_a; // Πινακας απαντησεων 
-  public static void Showquestion( int pos) { //μεθοδος που εμφανίζει την ερώτηση 	   
-	  System.out.println("Question is:" + easy_q[pos]);	 
-  }
-  public void giveMoney(King k ,int ammount ) { 
+  protected static String[] easy_q;
+  protected static String[] easy_a;
+  public static void Showquestion( int pos) {
+	  System.out.println("Question is:" + easy_q[pos]);
+	}
+  public void giveMoney(King k ,int ammount ) {
 	  if (Game.Seat_check(int pos) == false ) {
 	  if (Easy_anwser.checkanwser() == true) {
 		  k.setWallet(ammount);
@@ -21,7 +21,20 @@ public class Easy extends Bank {
 	    k.setWallet(-0.75*ammount);
 	    k1.setWallet(0.75*ammount);
 }
- } }}
+ } }
+ public static buyArea(int pos){
+	  if (Game.Seat_check(pos)== true ){
+	   if (Game.buy() == true){
+		   if (Easy_anwser.checkanwser() == true) {
+			   k.setWallet(-ammount);
+			   kn_cards[pos] = "k" ;
+		   }
+	   } else {
+		   System.out.println("Player k decided not to buy the Area");
+	   } }
+
+
+	  }
 
 
 
