@@ -28,7 +28,7 @@ public abstract class Bank {
 	
 	public abstract void takeMoney(King k); //{// μέθοδος που παίρνει χρηματικό ποσό από παίκτη κ το μεταφέρει στην τράπεζα αν η απάντηση είναι λάθος.
      
-	public abstract void tranfer(King k, King k1); 
+	public abstract void transfer(King k, King k1); 
 	
 	public static String[] Prop = new String[20];// δημιουργλια 2 μονοδιάστατων πίνακων παρράλληλων που αντιστοιχούν σε 
                                                 //	περιοχές και τιμές
