@@ -11,7 +11,7 @@ public class Hard_answer {
 		}
 		
 		public static boolean check_Answer(String[] hard_a, Player p) {
-			if(show_answer(p) == hard_a[p.getPos()]){
+			if(show_answer(p).equals(hard_a[p.getPos()])){
 				return true;
 			} else {
 				return false;
