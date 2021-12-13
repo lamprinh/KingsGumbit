@@ -55,10 +55,10 @@ public class Game {
 	    else {
 		  return false;
 	  }
-  public int positionfinder() {
-	  int posit = 0;
-	  posit = player.pos() + Game.roll_1();
-	  return posit;
+ // public int positionfinder() {
+	//  int posit = 0;
+	 // posit = player.pos() + Game.roll_1();
+	  // return posit;
   }
   public String levelfinder() {
 	  String level;
