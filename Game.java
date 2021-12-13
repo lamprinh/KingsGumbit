@@ -46,14 +46,14 @@ public class Game {
 	  pos = pos + roll_1();
 	  return pos;
 	}
-	public boolean anwsercheck(int pos) {
-		System.out.println("Please enter your anwser here");
-	    String anwser = input.nextLine();
-	    if (anwser.equals("Anwsers[pos]")) {
-	     return true;
-	    }
-	    else {
-		  return false;
+//	public boolean anwsercheck(int pos) {
+//		System.out.println("Please enter your anwser here");
+//	    String anwser = input.nextLine();
+//	    if (anwser.equals("Anwsers[pos]")) {
+//	     return true;
+//	    }
+//	    else {
+//		  return false;
 	  }
  // public int positionfinder() {
 	//  int posit = 0;
