@@ -175,7 +175,7 @@ public class Hard extends Bank {
 		hard_correct3.add("xio");
 		hard_correct3.add("kanari");
 		hard_correct3.add("psara");
-		hard_correct3.add("karaϊskakis");
+		hard_correct3.add("karaiskakis");
 		hard_correct3.add("fthinoporo");
 		return hard_correct3.get(i);
 	}
