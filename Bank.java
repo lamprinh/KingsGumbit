@@ -1,3 +1,4 @@
+package paketolamp;
 
 public abstract class Bank {
 
@@ -37,30 +38,30 @@ public abstract class Bank {
 
 	public static void setNamesArray() { // methodos pou kaleitai sti main otan xekinaei to paixnidi gia to gemisma tou
 											// pinaka
-		Prop[0] = "Αφετηρία";
-		Prop[1] = "Αθήνα";
-		Prop[2] = "Καλάβρυτα";
-		Prop[3] = "Τρίπολη";
-		Prop[4] = "Λαμία";
-		Prop[5] = "Ναύπλιο";
-		Prop[6] = "Πάρε εντολή";
-		Prop[7] = "Δελφοί";
-		Prop[8] = "Φαιστός";
-		Prop[9] = "Νεμέα";
-		Prop[10] = "Ιθάκη";
-		Prop[11] = "Kνωσός";
-		Prop[12] = "Πάρε εντολή";
-		Prop[13] = "Σούνιο";
-		Prop[14] = "Σπάρτη";
-		Prop[15] = "Αμφίπολη";
-		Prop[16] = "Σαλαμίνα";
-		Prop[17] = "Βοιωτία";
-		Prop[18] = "Πάρε εντολή";
-		Prop[19] = "Θασσαλονίκη";
-		Prop[20] = "Ιωάννινα";
-		Prop[21] = "Κόρινθος";
-		Prop[22] = "Αρκαδία";
-		Prop[23] = "Ύδρα";
+		Prop[0] = "afetiria";
+		Prop[1] = "athina";
+		Prop[2] = "Ξalabruta";
+		Prop[3] = "tripΞΏli";
+		Prop[4] = "lamia";
+		Prop[5] = "naupliΞΏ";
+		Prop[6] = "pare entΞΏli";
+		Prop[7] = "delfΞΏi";
+		Prop[8] = "faistos";
+		Prop[9] = "nemea";
+		Prop[10] = "ithaΞΊi";
+		Prop[11] = "Knosos";
+		Prop[12] = "pare entΞΏli";
+		Prop[13] = "sΞΏuniΞΏ";
+		Prop[14] = "sparti";
+		Prop[15] = "amfipΞΏli";
+		Prop[16] = "salamina";
+		Prop[17] = "bΞΏiotia";
+		Prop[18] = "pare entΞΏli";
+		Prop[19] = "thassalΞΏniΞΊi";
+		Prop[20] = "ioannina";
+		Prop[21] = "ΞorinthΞΏs";
+		Prop[22] = "arΞΊadia";
+		Prop[23] = "udra";
 	}
 
 	public static int[] Price = new int[24]; // dilwsi pinaka pou perixei tis times pou antistoixoun stis perioxes tou
