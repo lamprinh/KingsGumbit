@@ -1,8 +1,10 @@
+package paketolamp;
+
 import java.util.Scanner;
 
 public class Menucards {
 	public static void Menu1(int amount, Player[] arr, int i) {
-		System.out.println(+ arr[i].getCharacter() +" Pare 500 euro ap tous upoloipous paiktes.");
+		System.out.println(arr[i].getCharacter() + " Pare 500 euro ap tous upoloipous paiktes.");
 		arr[i].getWallet();
 		arr[i].setWallet(3 * amount);
 		Player p = arr[i];
@@ -10,7 +12,7 @@ public class Menucards {
 			if (arr[j] != p) {
 				arr[j].getWallet();
 				arr[j].setWallet(-amount);
-				System.out.println("O παίκτης  " + arr[j].getCharacter() + "  exei meiosi sto portofoli tou kata  "
+				System.out.println("O apaiktis  " + arr[j].getCharacter() + "  exei meiosi sto portofoli tou kata  "
 						+ amount + " euro kai pleon exei " + arr[j].getWallet() + " euro.");
 			}
 		}
@@ -19,15 +21,16 @@ public class Menucards {
 	}
 
 	public static void Menu2(int i, Player[] arr) {
-		System.out.println(+ arr[i].getCharacter() + " Metakinisou 3 theseis piso.");
+		System.out.println(arr[i].getCharacter() + " Metakinisou 3 theseis piso.");
 		Player p = arr[i];
 		p.getPos();
 		p.setPos(-3);
-		System.out.println( + p.getCharacter() + " briskesai stin thesi " + p.getPos() + ".");
+		System.out.println(p.getCharacter() + " briskesai stin thesi " + p.getPos() + ".");
 	}
 
 	public static void Menu3(int pos, Player[] arr, int i) {
-		System.out.println(+ arr[i].getCharacter() + " Pigaine stous delfous. An anikei se kapoion i perioxi tou ofeileis 500 euro. An peraseis apo tin afetiria sou afairountai 1000euro.");
+		System.out.println(arr[i].getCharacter()
+				+ " Pigaine stous delfous. An anikei se kapoion i perioxi tou ofeileis 500 euro. An peraseis apo tin afetiria sou afairountai 1000euro.");
 		Player p = arr[i];
 		int f_pos = p.getPos();
 		p.setPos(pos - f_pos);
@@ -53,20 +56,23 @@ public class Menucards {
 	}
 
 	public static void Menu4(int amount, Player[] arr, int j) {
-		System.out.println(+ arr[i].getCharacter() + " Afksithikan oi aksies twn perioxwn pou katexeis pare 250 euro.");
+		System.out.println(arr[j].getCharacter() + " Afksithikan oi aksies twn perioxwn pou katexeis pare 250 euro.");
 		for (int i = 0; i < Bank.King_area.length; i++) {
 			if (Bank.King_area[i] == j) {
 				arr[j].setWallet(amount);
 				Bank.setMoney(-amount);
-				System.out.println(" O paiktis " + arr[j].getCharacter() + " pairnei " + amount + " euro kai pleon exei "
-						+ arr[j].getWallet() + " euro.");
+				System.out.println(" O paiktis " + arr[j].getCharacter() + " pairnei " + amount
+						+ " euro kai pleon exei " + arr[j].getWallet() + " euro.");
 				break;
 			}
 		}
 	}
 
-	public static void Menu5(int amount, Player[] arr, int j, int k) {
-		System.out.println(+ arr[i].getCharacter() +"An o epomenos paiktis katexei perissoteres perioxes tou ofeileis 500 euro. Diaforetika sou ofeilei 500 euro.");
+	public static void Menu5(int amount, Player[] arr, int j, int k) { // An o epomenos paiktis katexei perissoteres
+																		// perioxes tou ofeileis 500 euro. Diaforetika
+																		// sou ofeilei 500 euro.
+		System.out.println(arr[j].getCharacter()
+				+ "An o epomenos paiktis katexei perissoteres perioxes tou ofeileis 500 euro. Diaforetika sou ofeilei 500 euro.");
 		int counterp = 0;
 		int counterp1 = 0;
 		for (int i = 0; i < Bank.King_area.length; i++) {
@@ -99,29 +105,42 @@ public class Menucards {
 	}
 
 	public static void Menu7(Player[] arr, int i) {
-		System.out.println(+arr[i].getCharacter() +" Kinisou 2 theseis mprosta.");
+		System.out.println(arr[i].getCharacter() + " Kinisou 2 theseis mprosta.");
 		arr[i].setPos(2);
 		System.out.println("O paiktis " + arr[i].getCharacter() + " brisketai stin thesi " + arr[i].getPos() + ".");
 	}
 
 	public static void Menu8(int i, Player[] arr) {
-		System.out.println(+ arr[i].getCharacter() +" An to epipedo duskolias einai eukolo sou afairountai 5000 euro.");
+		System.out.println(arr[i].getCharacter() + " An to epipedo duskolias einai eukolo sou afairountai 5000 euro.");
 		if (Game.levelfinder(i, arr).equals("easy")) {
 			arr[i].setWallet(-5000);
 			Bank.setMoney(5000);
 			System.out.println(" To portofoli tou paikti " + arr[i].getCharacter()
-					+ " meiothike kata 5000 euro kai pleon isoutai me " + arr[i].getWallet() + " ευρώ.");
+					+ " meiothike kata 5000 euro kai pleon isoutai me " + arr[i].getWallet() + " ΞµΟ…ΟΟ.");
 		} else {
 			System.out.println("O paiktis " + arr[i].getCharacter() + " den brisketai sto eukolo epipedo.");
 		}
 	}
 
 	public static void Menu9(int i, Player[] arr) {
-		System.out.println(+ arr[i].getCharacter() + " An to epipedo duskolias einai metrio ofeileis 5000 euro se enan apo tous paiktes. Dikaiousai na dialekseis.");
+		System.out.println(arr[i].getCharacter()
+				+ " An to epipedo duskolias einai metrio ofeileis 5000 euro se enan apo tous paiktes. Dikaiousai na dialekseis.");
 		Scanner input = new Scanner(System.in);
 		if (Game.levelfinder(i, arr).equals("normal")) {
-			System.out.println("Dialekse ton paikti.");
-			int z = input.nextInt();
+			boolean flag = false;
+			int z=-1;
+			while (flag == false) {
+		    System.out.println("Dialekse ton paikti.");
+		    z = input.nextInt();
+		    for ( int l=0; l<arr.length; l++) {
+				 if ( arr[z] == arr[l]) {
+					flag = true;
+				}
+			}
+			   if (flag == false) {
+				   System.out.println("Edwses mi diathesimi epilogi. Dwse ksana apantisi.");
+			   }
+		   }
 			arr[i].setWallet(-5000);
 			arr[z].setWallet(5000);
 			System.out.println(" O paiktis  " + arr[z].getCharacter() + " pairnei 5000 euro kai pleon exei "
@@ -135,7 +154,8 @@ public class Menucards {
 	}
 
 	public static void Menu10(int x, int[] King_area, Player[] arr) {
-		System.out.println(+ arr[i].getCharacter() + " An to epipedo duskolias einai duskolo kai katexeis 5 i perissoteres perioxes xaneis 1000 euro. Allios kerdizeis 1000 euro.");
+		System.out.println(arr[x].getCharacter()
+				+ " An to epipedo duskolias einai duskolo kai katexeis 5 i perissoteres perioxes xaneis 1000 euro. Allios kerdizeis 1000 euro.");
 		if (Game.levelfinder(x, arr).equals("hard")) {
 			int belong = 0;
 			for (int i = 0; i < King_area.length; i++) {
@@ -148,11 +168,13 @@ public class Menucards {
 			if (belong >= 5) {
 				arr[x].setWallet(-1000);
 				Bank.setMoney(1000);
-				System.out.println("O paiktis " + arr[x].getCharacter() + " xanei apo to portofoli tou " + 1000 + " euro.");
+				System.out.println(
+						"O paiktis " + arr[x].getCharacter() + " xanei apo to portofoli tou " + 1000 + " euro.");
 			} else {
 				arr[x].setWallet(1000);
 				Bank.setMoney(-1000);
-				System.out.println( "O paiktis " + arr[x].getCharacter() + " prosthetei sto portofoli tou " + 1000 + " euro.");
+				System.out.println(
+						"O paiktis " + arr[x].getCharacter() + " prosthetei sto portofoli tou " + 1000 + " euro.");
 			}
 		} else {
 			System.out.println("O paiktis " + arr[x].getCharacter() + " den brisketai sto duskolo epipedo.");
@@ -160,12 +182,13 @@ public class Menucards {
 	}
 
 	public static void Menu11(Player[] arr, int k) {
-		System.out.println(+arr[k].getCharacter() + " Dikaiousai na agoraseis mia mi katexomeni perioxi xwris na apantiseis kapoia erotisi.");
+		System.out.println(arr[k].getCharacter()
+				+ " Dikaiousai na agoraseis mia mi katexomeni perioxi xwris na apantiseis kapoia erotisi.");
 		Player p = arr[k];
 		boolean flag = false;
 		Scanner input = new Scanner(System.in);
 		int j = 0;
-		int[] B = new int[20];
+		int[] B = new int[24];
 		for (int i = 0; i < Bank.King_area.length; i++) {
 			if (Bank.King_area[i] == 9) {
 				B[j] = i;
@@ -182,8 +205,14 @@ public class Menucards {
 			System.out.println("Den yparxei diathesimi perioxi.");
 		}
 		System.out.println("Tha itheles na agoraseis kapoia perioxi;");
+		System.out.println("Dektes apantiseis:(Nai/Oxi)");
 		String answer = input.nextLine();
-		if (answer.equals("YES")) {
+				while ( answer.compareTo("Nai")!=0 && answer.compareTo("Oxi")!=0 ) {
+					System.out.println("Den edwses mia apo tis diathesimes apantiseis. Dektes apantiseis: (Nai/Oxi)");
+					System.out.println("Ksanadwse apantisi");
+					answer = input.nextLine();
+}
+		if (answer.equals("Nai")) {
 			System.out.println("Dialekse poia apo tis diathesimes perioxes thes na agoraseis.");
 			int area = input.nextInt();
 			p.setWallet(-Bank.Price[area]);
@@ -198,7 +227,7 @@ public class Menucards {
 	}
 
 	public static void Menu6(Player[] arr, int i, int amount) {
-		System.out.println(+ arr[i].getCharacter() + " Dose 600 euro stous upoloipous paiktes.");
+		System.out.println(arr[i].getCharacter() + " Dose 600 euro stous upoloipous paiktes.");
 		Player p = arr[i];
 		for (int j = 0; j < arr.length; j++) {
 			if (j != i) {
@@ -212,7 +241,8 @@ public class Menucards {
 	}
 
 	public static void Menu12(Player[] arr, int i, int amount, int sum) {
-		System.outprintln("An katexeis panw apo 4 perioxes pairneis 700 euro apo tous upoloipous paiktes. Diaforetika dineis 700 euro stous upoloipous paiktes.");
+		System.out.println(
+				"An katexeis panw apo 4 perioxes pairneis 700 euro apo tous upoloipous paiktes. Diaforetika dineis 700 euro stous upoloipous paiktes.");
 		Player p = arr[i];
 		int counter = 0;
 		for (int m = 0; i < Bank.King_area.length; i++) {
@@ -222,24 +252,29 @@ public class Menucards {
 		}
 		if (counter >= sum) {
 			for (int j = 0; j < arr.length; j++) {
+				int num = 0 ;
 				if (j != i) {
+					num++ ;
 					p.setWallet(amount);
 					arr[j].setWallet(-amount);
 					System.out.println(
-							"O paiktis " + p.getCharacter() + " prosthetei sto portofoli tou " + amount + " euro.");
+							"O paiktis " + p.getCharacter() + " prosthetei sto portofoli tou " + num * amount + " euro.");
 					System.out.println("O paiktis " + arr[j].getCharacter() + " xanei " + amount + " euro.");
 				}
 			}
 		} else {
 			for (int j = 0; j < arr.length; j++) {
+				int num = 0 ;
+				if ( j!= i) {
+				num++ ;
 				p.setWallet(-amount);
 				arr[j].setWallet(amount);
 				System.out.println(
 						"O paiktis " + arr[j].getCharacter() + " prosthetei sto portofoli tou " + amount + " euro.");
-				System.out.println("O paiktis " + p.getCharacter() + " xanei " + amount + " euro.");
+				System.out.println("O paiktis " + p.getCharacter() + " xanei " + num * amount + " euro.");
 
 			}
 
 		}
 	}
-}
+}}
