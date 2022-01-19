@@ -1,6 +1,9 @@
-import java.util.Random;
+package paketolamp;
 
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.Random;
 import org.junit.Assert;
+
 import org.junit.jupiter.api.Test;
 
 class GameTest {
