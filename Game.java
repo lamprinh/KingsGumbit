@@ -1,3 +1,5 @@
+package paketolamp;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -5,7 +7,7 @@ import java.util.Scanner;
 public class Game {
 	static Scanner input = new Scanner(System.in);
 
-	public static void lalala() {
+	public static void lalala() { // methodos pou dimiourgei ti lista me tis kartes entolon//
 		ArrayList<String> Menu_cards = new ArrayList<String>();
 	 Menu_cards.add("Pare 500 euro ap tous upoloipous paiktes.");
 	 Menu_cards.add(" Metakinisou 3 theseis piso.");
@@ -23,23 +25,28 @@ public class Game {
 
 	static Random dicenumber = new Random();
 
-	public static boolean buy() {
+	public static boolean buy() { //methodos pou kaleitai gia na dwsei tin epilogi ston paikti na agorasei mia perioxi se periptwsi pou pesei se autin kai den anikei se kapoion//
 		System.out.println("Theleis na agoraseis tin perioxi ?Dektes apantiseis:(Nai/Oxi)");
 		String answer = input.nextLine();
-		if (answer == "Nai") {
+		while ( answer.compareTo("Nai")!=0 && answer.compareTo("Oxi")!=0 ) {
+			System.out.println("Den edwses mia apo tis diathesimes apantiseis. Deketes apantiseis: (Nai/Oxi)");
+			System.out.println("Ksanadwse apantisi");
+			answer = input.nextLine();
+}
+		if (answer.equals("Nai")) {
 			return true;
 		} else {
 			return false;
 		}
 	}
 
-	public static int roll_1() {
+	public static int roll_1() { //methodos pou epistrefei tuxaio arithmo metaksi 1-6 (zari)
 		int dice;
 		dice = 1 + dicenumber.nextInt(6);
 		return dice;
 	}
 
-	public static void roll_easy(int i, Player[] arr) {
+	public static void roll_easy(int i, Player[] arr) { //methodos pou ektupwnei gia kathe paikti tin erwtisi pou tou antistixei sto eukolo epipedo//
 		if (i == 0) {
 			if (arr[i].getPos() > 0 && arr[i].getPos() <= 5) {
 				Easy.easyQ1(arr[i].getPos() - 1);
@@ -83,7 +90,7 @@ public class Game {
 		}
 	}
 
-	public static void roll_normal(int i, Player[] arr) {
+	public static void roll_normal(int i, Player[] arr) { //methodos pou ektupwnei gia kathe paikti tin erwtisi pou tou antistixei sto normal epipedo//
 		if (i == 0) {
 			if (arr[i].getPos() > 0 && arr[i].getPos() <= 5) {
 				Normal.normalQ1(arr[i].getPos() - 1);
@@ -127,7 +134,7 @@ public class Game {
 		}
 	}
 
-	public static void roll_hard(int i, Player[] arr) {
+	public static void roll_hard(int i, Player[] arr) { //methodos pou ektipwnei  gia kathe paikti tin erwtisi pou tou antistixei sto hard epipedo//
 		if (i == 0) {
 			if (arr[i].getPos() > 0 && arr[i].getPos() <= 5) {
 				Hard.hardQ1(arr[i].getPos() - 1);
@@ -171,7 +178,7 @@ public class Game {
 		}
 	}
 
-	public static int roll_3() {
+	public static int roll_3() { // methodos pou epistrefei tixaio arithmo metaksu 1-11//
 		int dice;
 		dice = 1 + dicenumber.nextInt(11);
 		return dice;
@@ -183,7 +190,7 @@ public class Game {
 
 	}
 
-	public static String levelfinder(int i, Player[] arr) {
+	public static String levelfinder(int i, Player[] arr) { // methodos pou briskei to epipedo sto opoio brisketai to paixnidi//
 		String level;
 		if (arr[i].getRound() == 1) {
 			level = "easy";
