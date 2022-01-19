@@ -1,5 +1,7 @@
+package paketolamp;
+
 /* H klasi hard_asnwer xrisomopoieitai gia na dexetai tis apantiseis ton paixton stis duskoles
-*  erotiseis kai na tis sugkrinei me tis sostes poy vriskontai sth klasi Hard stin antistoixi lista 
+*  erotiseis kai na tis sugkrinei me tis sostes poy vriskontai sth klasi Hard stin antistoixi lista
 */
 
 import java.util.Scanner;
@@ -7,7 +9,7 @@ import java.util.Scanner;
 public class Hard_answer {
 	static Scanner input = new Scanner(System.in);
 
-	//zitaei kai emfanizei tin apantisi tou paixti otan xreiastei
+	// zitaei kai emfanizei tin apantisi tou paixti otan xreiastei
 	public static String show_answer(int i, Player[] arr) {
 		System.out.println("Paixti " + arr[i].getCharacter() + " apantise tin erotisi");
 		String answer = input.nextLine();
@@ -15,7 +17,8 @@ public class Hard_answer {
 		return answer;
 	}
 
-	//sugrkinei tis apantiseis tis listas me tis apantisis ton paixton kai epistrefei an apantisan sosta i oxi
+	// sugrkinei tis apantiseis tis listas me tis apantisis ton paixton kai
+	// epistrefei an apantisan sosta i oxi
 	public static boolean Check_Answer(Player[] arr, int i, String answer) {
 		boolean flag = false;
 		int x = arr[i].getPos();
