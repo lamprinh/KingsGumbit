@@ -1,5 +1,7 @@
-/* H klasi Hard epekteinei thn klasi Bank kai uperkalipti 5 methodous tis  
-*  Stin klasi dimiourgountai 4 listes poy periexoun tis duskoles erotisis tou paixnidiou kai alles 4 me tis antistoixes apanthseis 
+package paketolamp;
+
+/* H klasi Hard epekteinei thn klasi Bank kai uperkalipti 5 methodous tis
+*  Stin klasi dimiourgountai 4 listes poy periexoun tis duskoles erotisis tou paixnidiou kai alles 4 me tis antistoixes apanthseis
 */
 
 import java.util.ArrayList;
@@ -41,7 +43,8 @@ public class Hard extends Bank {
 		hard_q2.add("Poios itan o teleutaios basilias tis athinas; ");
 		hard_q2.add("Me poia maxi epiblithikan stratiotika stis poleis tis notias elladas oi makedones; ");
 		hard_q2.add("Se poia poli itan nomothetis o lukourgos; ");
-		hard_q2.add("Pos legotan sti dimokratia i dunatotita kathe politi na pairnei to logo kai na leei eleuthera tin apopsi tou;");
+		hard_q2.add(
+				"Pos legotan sti dimokratia i dunatotita kathe politi na pairnei to logo kai na leei eleuthera tin apopsi tou;");
 		hard_q2.add("O periandros itan turannos stin… ");
 		hard_q2.add("Poia perioxi eixe tous pio fimismenous kabalarides; ");
 		hard_q2.add("Poios prototupos ellinas stratigos xrisimopoiise tous polemikous elefantes; ");
@@ -88,7 +91,8 @@ public class Hard extends Bank {
 		hard_q4.add("to 1994 anagnoristike apo ti bouli ton ellinon i ... ton pontion.");
 		hard_q4.add("o kemal atatourk itan ...tou tourkikou stratou.");
 		hard_q4.add("o kemal se mustiki sumfonia me tous gallous akurose ti sumfonia ton ...");
-		hard_q4.add("i sumfonia pou sunomologithike metaksu gallias kai kubernisis agkuras onomastike sunthiki tis ...");
+		hard_q4.add(
+				"i sumfonia pou sunomologithike metaksu gallias kai kubernisis agkuras onomastike sunthiki tis ...");
 		hard_q4.add("i sunthiki tis lozanis upograftike stin ...");
 		hard_q4.add("to 1923 sumfonithike metaksu elladas kai tourkias i antallagi ...");
 		hard_q4.add("metaksu ton antallaksimon plithusmon perilambanontan kai ellines tou ...");
@@ -97,14 +101,15 @@ public class Hard extends Bank {
 		hard_q4.add("i oktobriani epanastasi einai gnosti kai os ... oktobrios.");
 		hard_q4.add("i sunthiki ton ...termatise ton a pagkosmio polemo.");
 		hard_q4.add("i italia upirkse mia apo tis...");
-		hard_q4.add("i megali idea sxetizontan me tin apeleutherosi ton perioxon pou zousan oi ellinikoi plithusmoi stin ...");
+		hard_q4.add(
+				"i megali idea sxetizontan me tin apeleutherosi ton perioxon pou zousan oi ellinikoi plithusmoi stin ...");
 		hard_q4.add("o adolfos xitler eixe tin prosonumia ...");
 		hard_q4.add("o xitler itan germanos ...tis nazistikis germanias.");
 		hard_q4.add("o xitler dietelese ...tis germanias.");
 		hard_q4.add("o xitler upefere apo tin noso ...");
 		System.out.println(hard_q4.get(i));
 	}
-	
+
 	public static String hardc1(int i) {
 		ArrayList<String> hard_correct1 = new ArrayList<String>();
 		hard_correct1.add("themis");
@@ -205,9 +210,9 @@ public class Hard extends Bank {
 		return hard_correct4.get(i);
 	}
 
-	//xrisimopoiite gia na plirothei i xreothi o paixtis poy apanthse sosta
 	@Override
-	public void giveMoney(int i, Player[] arr) {
+	public void giveMoney(int i, Player[] arr) { // xrisimopoiite gia na plirothei i xreothi o paixtis poy apanthse
+													// sosta
 		if (Bank.King_area[i] == 9) {
 			System.out.println("H perioxi den anikei se kanenan");
 			arr[i].setWallet(Bank.getAmount() + 1000);
@@ -222,15 +227,15 @@ public class Hard extends Bank {
 		}
 	}
 
-	//xrisimopoiite gia na xreothi o paixtis poy apanthse lathos
 	@Override
-	public void takeMoney(int i, Player[] arr) {
+	public void takeMoney(int i, Player[] arr) { // xrisimopoiite gia na xreothi o paixtis poy apanthse lathos
 		if (Bank.King_area[arr[i].getPos()] == 9) {
 			System.out.println("H perioxi den anikei se kanenan.");
 			arr[i].setWallet(-(Bank.getAmount() - 700));
 			Bank.setMoney(Bank.getAmount() - 700);
-			System.out.println("To portofoli tou " + arr[i].getCharacter() + " meiothike kata " + (Bank.getAmount() - 700)
-					+ " euro kai pleon exei sto portofoli tou " + arr[i].getWallet() + " euro");
+			System.out
+					.println("To portofoli tou " + arr[i].getCharacter() + " meiothike kata " + (Bank.getAmount() - 700)
+							+ " euro kai pleon exei sto portofoli tou " + arr[i].getWallet() + " euro");
 		} else {
 			int x = Bank.King_area[arr[i].getPos()];
 			System.out.println("H perioxi anikei ston " + arr[x].getCharacter());
@@ -238,17 +243,18 @@ public class Hard extends Bank {
 		}
 	}
 
-	//pragmatopoiei tis dosolipsies ton paixton
 	@Override
-	public void transferTrue(int i, Player[] arr) {
+	public void transferTrue(int i, Player[] arr) { // pragmatopoiei tis dosolipsies ton paixton
 		if (Bank.King_area[arr[i].getPos()] != 9) {
 			arr[i].setWallet(-Bank.getAmount() * 2 / 4);
 			int w = Bank.King_area[arr[i].getPos()];
-			System.out.println("To portofoli tou " + arr[i].getCharacter() + " meiothike kata " + (Bank.getAmount() * 2 / 4)
-					+ " euro kai pleon exei sto portofoli tou " + arr[i].getWallet() + " euro");
+			System.out.println(
+					"To portofoli tou " + arr[i].getCharacter() + " meiothike kata " + (Bank.getAmount() * 2 / 4)
+							+ " euro kai pleon exei sto portofoli tou " + arr[i].getWallet() + " euro");
 			arr[w].setWallet(Bank.getAmount() * 2 / 4);
-			System.out.println("To portofoli tou " + arr[w].getCharacter() + " afksithike kata " + (Bank.getAmount() * 2 / 4)
-					+ " euro kai pleon exei sto portofoli tou " + arr[w].getWallet() + " euro");
+			System.out.println(
+					"To portofoli tou " + arr[w].getCharacter() + " afksithike kata " + (Bank.getAmount() * 2 / 4)
+							+ " euro kai pleon exei sto portofoli tou " + arr[w].getWallet() + " euro");
 		}
 	}
 
@@ -265,9 +271,8 @@ public class Hard extends Bank {
 		}
 	}
 
-	//xrisimopoiite gia tin agora perioxis apo kapoion paixti
 	@Override
-	public void buyProperty(int i, Player[] arr) {
+	public void buyProperty(int i, Player[] arr) { // xrisimopoiite gia tin agora perioxis apo kapoion paixti
 		if (Bank.King_area[arr[i].getPos()] == 9) {
 			if (Game.buy() == true) {
 				arr[i].setWallet(-Bank.Price[arr[i].getPos()]);
