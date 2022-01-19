@@ -1,3 +1,4 @@
+package paketolamp;
 
 public class Player {
 	public int wallet;
@@ -13,8 +14,8 @@ public class Player {
 	}
 
 	public int getWallet() {
-		return wallet;
-	}
+		return wallet; // methodos get gia emfanish xrimatwn pou exei sti diathesei tou o paiktis
+	} // methodos set gia tropopoihsh xrimatwn paikti
 
 	public void setWallet(int wallet) {
 		this.wallet += wallet;
@@ -22,9 +23,9 @@ public class Player {
 
 	public int getPos() {
 		return pos;
-	}
+	} // methodos get gia emfanisi thesis paikti
 
-	public void setPos(int pos) {
+	public void setPos(int pos) { // methoodos set gia tropopoihsh thesis paikti
 		this.pos += pos;
 	}
 
@@ -32,12 +33,12 @@ public class Player {
 		return round;
 	}
 
-	public void setRound(int round) {
-		this.round = round;
+	public void setRound(int round) { // methodos get gia emfanisi girou paikti
+		this.round = round; // methoodos set gia tropopoihsh girou paikti
 	}
 
-	public String getCharacter() {
-		return character;
+	public String getCharacter() { // methoodos set gia tropopoihsh xaraktira paikti
+		return character; // methoodos set gia tropopoihsh xaraktira paikti
 	}
 
 	public void setCharacter(String character) {
